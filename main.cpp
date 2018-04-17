@@ -67,7 +67,7 @@ void wave_file_transform(string infile, string outfile, short (* fn)(unsigned ch
     fin.read((char*)(input_buf + i), 1);
   }
   /* Do conversion */
-  for (uint32_t i = 0; i < inputNumSamples; i += 2) {
+  for (uint32_t i = 0; i < inputNumSamples; i++) {
     output_buf[i] = fn(input_buf[i]);
   }
   /* Output metadata */
